@@ -1,4 +1,4 @@
-package kmeans;
+package labs.kmeans;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
@@ -30,18 +30,26 @@ public class KMeansReducer extends
         List<Vector> vectorList = new LinkedList<Vector>();
         int vectorSize = key.getCenter().getVector().length;
         newCenter.setVector(new double[vectorSize]);
+
         double[] resultVector = newCenter.getVector();
 
         for (Vector value : values) {
             vectorList.add(new Vector(value));
             double source[] = value.getVector();
             for (int i = 0; i < resultVector.length; i++) {
-                resultVector[i] += source[i];
+                /**
+                 * Lab 2:
+                 * Sum up all Vector value. (Each digital is stored in source[])
+                 * Save result in resultVector[].
+                 **/
             }
         }
 
         for (int i = 0; i < resultVector.length; i++) {
-            resultVector[i] = resultVector[i] / vectorList.size();
+           /**
+            * Lab 2:
+            * Calculate mean of each digital in resultVector[]
+            * */
         }
 
         ClusterCenter center = new ClusterCenter(newCenter);

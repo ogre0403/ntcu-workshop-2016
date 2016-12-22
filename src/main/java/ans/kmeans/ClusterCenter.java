@@ -1,4 +1,4 @@
-package kmeans;
+package ans.kmeans;
 
 import org.apache.hadoop.io.WritableComparable;
 

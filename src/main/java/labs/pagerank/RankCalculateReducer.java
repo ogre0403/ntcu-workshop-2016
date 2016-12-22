@@ -1,4 +1,4 @@
-package pagerank;
+package labs.pagerank;
 
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
@@ -51,7 +51,11 @@ public class RankCalculateReducer extends Reducer<Text, Text, Text, Text> {
                 int linkCount = Integer.valueOf(sections[2]);
 
                 // Add the given pagerank to the running total for the other pages
-                sOtherPR += currentPageRank / linkCount;
+                /**
+                 * Lab 3
+                 * Calculate fraction pagerank contributed from linked page.
+                 * Sum up all contributed pagerank.
+                 * */
             }
         }
 

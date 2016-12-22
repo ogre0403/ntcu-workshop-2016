@@ -1,4 +1,4 @@
-package wordcount;
+package labs.wordcount;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
@@ -19,9 +19,11 @@ public class WordCountMapper extends Mapper<Object, Text, Text, IntWritable> {
 
         StringTokenizer itr = new StringTokenizer(value.toString());
         while (itr.hasMoreTokens()) {
-            String _word;
-            _word = itr.nextToken();
-            word.set(_word);
+            /**
+             * Labs 1:
+             * Use StringTokenizer.nextToken() to get word, then set the value by
+             * Text.set()
+             **/
             context.write(word, one);
         }
     }

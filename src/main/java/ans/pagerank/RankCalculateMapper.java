@@ -1,4 +1,4 @@
-package pagerank;
+package ans.pagerank;
 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -16,7 +16,7 @@ public class RankCalculateMapper extends Mapper<LongWritable, Text, Text, Text> 
      * and store a new key-value pair mapping linked pages to this page's name, rank and total number of links:
      *      `"[otherPage]   [thisPage]    [thisPagesRank]    [thisTotalNumberOfLinks]"
      *
-     * Note: Remember that the pagerank calculation MapReduce job will run multiple times, as the pagerank will get
+     * Note: Remember that the ans.pagerank calculation MapReduce job will run multiple times, as the ans.pagerank will get
      * more accurate with each iteration. You should preserve each page's list of links.
      *
      * @param key the key associated with each item output from {@link uk.ac.ncl.cs.csc8101.hadoop.parse.PageLinksParseReducer PageLinksParseReducer}

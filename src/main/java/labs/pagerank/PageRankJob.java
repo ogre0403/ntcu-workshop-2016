@@ -1,4 +1,4 @@
-package pagerank;
+package labs.pagerank;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;

@@ -1,4 +1,4 @@
-package kmeans;
+package labs.kmeans;
 
 public class DistanceMeasurer {
 

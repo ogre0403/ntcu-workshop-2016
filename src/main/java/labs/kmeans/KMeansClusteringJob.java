@@ -1,4 +1,4 @@
-package kmeans;
+package labs.kmeans;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
